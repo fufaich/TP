@@ -16,6 +16,8 @@ class Bus: public Garage{
     public:
         Bus(string brand, string model, int countSitPlace, int countPlace, string destination) :Garage(brand, model),
         countSitPlace(countSitPlace), countPlace(countPlace), destination(destination){};
+        Bus(const Bus& other);
+        Bus();
 
         int getCountSitPlace() const;
         int getCoutnPlace() const;

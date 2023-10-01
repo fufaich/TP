@@ -6,6 +6,8 @@ class Garage{
         string model;
     public:
         Garage(string brand, string model);
+        Garage(const Garage& other);
+        Garage();
         ~Garage(){};
         
         string getBrand() const;

@@ -15,6 +15,8 @@ class Auto: public Garage{
     public:
         Auto(string brand, string model, float SizeEngine, string color, string kpp):Garage(brand, model),SizeEngine(SizeEngine),
         Color(color), KPP(kpp){};
+        Auto(const Auto& other);
+        Auto();
         float getSizeEngine() const;
         string getColor() const;
         string getKPP() const;
