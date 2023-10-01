@@ -25,3 +25,16 @@ int Motorcycle::getHP() const{
 string Motorcycle::getMission() const{
     return this->Mission;
 }
+
+void Motorcycle::PrintDetails(std::ostream& os) const{
+        os << "Auto ";
+        os << this->brand << " ";
+        os << this->model << " ";
+        os << this->SizeEngine << " ";
+        os << this->HP << " ";
+        os << this->Mission << endl;
+    }
+
+void Motorcycle::ReadDetails(istream& is) {
+    is >> brand >> model >> SizeEngine >> HP >> Mission;
+}

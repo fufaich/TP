@@ -25,3 +25,18 @@ string Auto::getColor() const{
 string Auto::getKPP() const{
     return this->KPP;
 }
+
+void Auto::PrintDetails(std::ostream& os) const{
+        os << "Auto ";
+        os << this->brand << " ";
+        os << this->model << " ";
+        os << this->SizeEngine << " ";
+        os << this->Color << " ";
+        os << this->KPP << endl;
+    }
+
+void Auto::ReadDetails(istream& is) {
+    is >> brand >> model >> SizeEngine >> Color >> KPP;
+}
+
+

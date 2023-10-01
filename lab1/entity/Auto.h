@@ -1,4 +1,5 @@
 #include "Garage.h"
+#include <fstream>
 
 /*Для
 каждого автомобиля определено: марка, модель, объем двигателя, цвет, тип
@@ -21,4 +22,6 @@ class Auto: public Garage{
         string getColor() const;
         string getKPP() const;
 
+        void PrintDetails(std::ostream& os) const override;
+        void ReadDetails(istream& is)  override;
 };

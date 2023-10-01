@@ -12,4 +12,7 @@ class Garage{
         
         string getBrand() const;
         string getModel() const;
+
+        virtual void PrintDetails(std::ostream& os) const = 0;
+        virtual void ReadDetails(std::istream& is)  = 0;
 };

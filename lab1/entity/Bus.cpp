@@ -23,3 +23,16 @@ int Bus::getCoutnPlace() const{
 string Bus::getDestination() const{
     return this->destination;
 }
+
+void Bus::PrintDetails(std::ostream& os) const{
+        os << "Auto ";
+        os << this->brand << " ";
+        os << this->model << " ";
+        os << this->countSitPlace << " ";
+        os << this->countPlace << " ";
+        os << this->destination << endl;
+    }
+
+void Bus::ReadDetails(istream& is) {
+    is >> brand >> model >> countSitPlace >> countPlace >> destination;
+}

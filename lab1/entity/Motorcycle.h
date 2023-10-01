@@ -1,5 +1,5 @@
 #include "Garage.h"
-
+#include <fstream>
 /*
 Для каждого мотоцикла определено: марка, модель, объем двигателя,
 мощность двигателя, для какой местности мотоцикл предназначен.
@@ -21,4 +21,7 @@ class Motorcycle: public Garage{
         float getSizeEngine() const;
         int getHP() const;
         string getMission() const;
+
+        void PrintDetails(std::ostream& os) const override;
+        void ReadDetails(istream& is)  override;
 };

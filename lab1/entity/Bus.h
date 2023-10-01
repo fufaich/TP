@@ -4,6 +4,7 @@
 пассажирских мест, общее количество пассажирских мест, конечный пункт
 */
 #include "Garage.h"
+#include <fstream>
 using namespace std;
 
 class Bus: public Garage{
@@ -22,4 +23,7 @@ class Bus: public Garage{
         int getCountSitPlace() const;
         int getCoutnPlace() const;
         string getDestination() const;
+
+        void PrintDetails(std::ostream& os) const override;
+        void ReadDetails(istream& is)  override;
 };
