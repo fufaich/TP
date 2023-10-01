@@ -1,7 +1,7 @@
-#include <iostream>
+#include <string>
 using namespace std;
 class Garage{
-    private:
+    protected:
         string brand; 
         string model;
     public:
