@@ -5,7 +5,6 @@
 каждого автомобиля определено: марка, модель, объем двигателя, цвет, тип
 КПП.
 */
-using namespace std;
 class Auto: public Garage{
     private:
         float SizeEngine;

@@ -1,7 +1,5 @@
 #include "Motorcycle.h"
 
-using namespace std;
-
 Motorcycle::Motorcycle(const Motorcycle& other):Garage(other){
     this->SizeEngine = other.SizeEngine;
     this->HP = other.HP;
@@ -27,7 +25,7 @@ string Motorcycle::getMission() const{
 }
 
 void Motorcycle::PrintDetails(std::ostream& os) const{
-        os << "Auto ";
+        os << "Moto ";
         os << this->brand << " ";
         os << this->model << " ";
         os << this->SizeEngine << " ";

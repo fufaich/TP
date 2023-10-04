@@ -5,7 +5,6 @@
 */
 #include "Garage.h"
 #include <fstream>
-using namespace std;
 
 class Bus: public Garage{
     private:
@@ -24,6 +23,6 @@ class Bus: public Garage{
         int getCoutnPlace() const;
         string getDestination() const;
 
-        void PrintDetails(std::ostream& os) const override;
+        void PrintDetails(ostream& os) const override;
         void ReadDetails(istream& is)  override;
 };

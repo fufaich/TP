@@ -1,5 +1,4 @@
 #include "Garage.h"
-using namespace std;
 
 Garage::Garage(string brand, string model){
     this->brand = brand;

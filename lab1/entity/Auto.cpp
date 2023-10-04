@@ -1,7 +1,5 @@
 #include "Auto.h"
 
-using namespace std;
-
 Auto::Auto(const Auto& other):Garage(other){
     this->SizeEngine = other.SizeEngine;
     this->Color = other.Color;
@@ -26,7 +24,7 @@ string Auto::getKPP() const{
     return this->KPP;
 }
 
-void Auto::PrintDetails(std::ostream& os) const{
+void Auto::PrintDetails(ostream& os) const{
         os << "Auto ";
         os << this->brand << " ";
         os << this->model << " ";
