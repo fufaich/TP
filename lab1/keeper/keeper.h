@@ -1,6 +1,8 @@
 #include <fstream>
 #include <iostream>
 #include "struct.h"
+
+
 using namespace std;
 
 class Keeper{

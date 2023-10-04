@@ -36,3 +36,8 @@ void Motorcycle::PrintDetails(std::ostream& os) const{
 void Motorcycle::ReadDetails(istream& is) {
     is >> brand >> model >> SizeEngine >> HP >> Mission;
 }
+
+short int Motorcycle::getType() const{
+    return 2;
+}
+
