@@ -25,7 +25,7 @@ string Bus::getDestination() const{
 }
 
 void Bus::PrintDetails(std::ostream& os) const{
-        os << "Auto ";
+        os << "Bus ";
         os << this->brand << " ";
         os << this->model << " ";
         os << this->countSitPlace << " ";
