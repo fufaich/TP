@@ -39,4 +39,7 @@ void Auto::ReadDetails(istream& is) {
     is >> brand >> model >> SizeEngine >> Color >> KPP;
 }
 
+short int Auto::getType() const{
+    return 0;
+}
 
