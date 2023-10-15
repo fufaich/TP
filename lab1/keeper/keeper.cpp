@@ -29,3 +29,31 @@ void Keeper::printToConsole(){
     }
     
 }
+
+void Keeper::loadToFile(string nameFile){
+    ofstream outputFile(nameFile);
+    Node* tmp = head;
+    while(tmp != nullptr){
+        tmp->PtrGarage->PrintDetails(outputFile);
+        tmp = tmp->next;
+    }
+}
+
+
+
+void Keeper::loadFromFile(string nameFile){
+    ifstream readFile(nameFile);
+    string word;
+    while (readFile >> word)
+    {
+        if(word== string("Auto")){
+            cout << "Auto" << endl;
+        }else if(word == string("Bus")){
+            cout << "Bus" << endl;
+        }
+        else if(word == string("Moto")){
+            cout << "Moto" << endl;
+        }
+    }
+    
+}

@@ -1,7 +1,7 @@
 #include <fstream>
 #include <iostream>
 #include "struct.h"
-
+#include <sstream>
 
 using namespace std;
 
@@ -15,5 +15,7 @@ class Keeper{
         ~Keeper();
         void addUnit(Garage* unit);
         void printToConsole();
+        void loadToFile(string nameFile);
+        void loadFromFile(string nameFile);
 
 };
