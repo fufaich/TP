@@ -1,5 +1,14 @@
 #include "keeper.h"
 
+Keeper::~Keeper(){
+    Node* tmp;
+    while(head != nullptr){
+        tmp = head;
+        head = head->next;
+        delete tmp;
+    }
+}
+
 void Keeper::addUnit(Garage* unit){
     if(head == nullptr){
         head = new Node(unit);

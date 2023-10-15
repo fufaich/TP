@@ -5,4 +5,7 @@ struct Node
     Node* next;
 
     Node(Garage* g): PtrGarage(g), next(nullptr){}
+    ~Node(){
+        delete PtrGarage;
+    }
 };

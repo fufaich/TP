@@ -12,6 +12,7 @@ class Keeper{
         Node* tail;
     public:
         Keeper():head(nullptr),tail(nullptr), lastUnit(nullptr){};
+        ~Keeper();
         void addUnit(Garage* unit);
         void printToConsole();
 
