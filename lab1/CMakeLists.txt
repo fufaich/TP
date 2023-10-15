@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.26.4)
 project(lab1)
 
 set(SOURCES
+        main.cpp
         entity/Garage.cpp
         entity/Auto.cpp
         entity/Bus.cpp

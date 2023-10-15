@@ -21,7 +21,6 @@ class Auto: public Garage{
         string getColor() const;
         string getKPP() const;
 
-        short int getType() const override;
         void PrintDetails(std::ostream& os) const override;
         void ReadDetails(istream& is)  override;
 };

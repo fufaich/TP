@@ -22,7 +22,6 @@ class Motorcycle: public Garage{
         string getMission() const;
 
 
-        short int getType() const override;
         void PrintDetails(std::ostream& os) const override;
         void ReadDetails(istream& is)  override;
 };

@@ -37,7 +37,3 @@ void Bus::ReadDetails(istream& is) {
     is >> brand >> model >> countSitPlace >> countPlace >> destination;
 }
 
-short int Bus::getType() const{
-    return 1;
-}
-
