@@ -1,7 +1,13 @@
 #include <fstream>
 #include <iostream>
-#include "struct.h"
 #include <sstream>
+
+#include "struct.h"
+#include "../entity/Auto.h"
+#include "../entity/Bus.h"
+#include "../entity/Motorcycle.h"
+
+
 
 using namespace std;
 
@@ -10,6 +16,7 @@ class Keeper{
         Node* head;
         Node* lastUnit;
         Node* tail;
+
     public:
         Keeper():head(nullptr),tail(nullptr), lastUnit(nullptr){};
         ~Keeper();

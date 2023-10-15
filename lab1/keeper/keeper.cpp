@@ -1,6 +1,9 @@
 #include "keeper.h"
 
-Keeper::~Keeper(){
+
+
+Keeper::~Keeper()
+{
     Node* tmp;
     while(head != nullptr){
         tmp = head;
@@ -37,23 +40,32 @@ void Keeper::loadToFile(string nameFile){
         tmp->PtrGarage->PrintDetails(outputFile);
         tmp = tmp->next;
     }
-}
-
+};
 
 
 void Keeper::loadFromFile(string nameFile){
     ifstream readFile(nameFile);
     string word;
-    while (readFile >> word)
+    string line;
+    while (!readFile.eof())
     {
-        if(word== string("Auto")){
-            cout << "Auto" << endl;
-        }else if(word == string("Bus")){
-            cout << "Bus" << endl;
+        if(readFile >> word){
+            if(word== string("Auto")){
+                getline(readFile, line);
+                this->addUnit(new Auto(line));
+            }else if(word == string("Bus")){
+                getline(readFile, line);
+                this->addUnit(new Bus(line));
+            }
+            else if(word == string("Moto")){
+                getline(readFile, line);
+                this->addUnit(new Motorcycle(line));
+            }
+        }else{
+            break;
         }
-        else if(word == string("Moto")){
-            cout << "Moto" << endl;
-        }
+        
     }
+    readFile.close();
     
 }

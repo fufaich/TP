@@ -12,6 +12,21 @@ Bus::Bus():Garage(){
     this->destination = "Undefined";
 }
 
+Bus::Bus(string str):Garage(){
+    string brand;
+    string model;
+    int countSitPlace;
+    int countPlace;
+    string destination;
+    istringstream iss(str);
+    iss >> brand >> model >> countSitPlace >> countPlace>> destination;
+    this->brand = brand;
+    this->model = model;
+    this->countSitPlace = (int)countSitPlace;
+    this->countPlace = (int)countPlace;
+    this->destination = destination;   
+}
+
 int Bus::getCountSitPlace() const{
     return this->countSitPlace;
 }

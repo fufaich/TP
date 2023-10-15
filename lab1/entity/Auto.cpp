@@ -6,6 +6,21 @@ Auto::Auto(const Auto& other):Garage(other){
     this->KPP = other.KPP;
 }
 
+Auto::Auto(string str):Garage(){
+    string brand;
+    string model;
+    float sizeEngine;
+    string color;
+    string kpp;
+    istringstream iss(str);
+    iss >> brand >> model >> sizeEngine >> color>> kpp;
+    this->brand = brand;
+    this->model = model;
+    this->SizeEngine = (float)sizeEngine;
+    this->Color = color;
+    this->KPP = kpp;   
+}
+
 Auto::Auto():Garage(){
     this->SizeEngine = 0;
     this->Color = "Undefined";

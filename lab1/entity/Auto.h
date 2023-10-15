@@ -1,5 +1,7 @@
+#pragma once
 #include "Garage.h"
 #include <fstream>
+#include <sstream>
 
 /*Для
 каждого автомобиля определено: марка, модель, объем двигателя, цвет, тип
@@ -16,6 +18,7 @@ class Auto: public Garage{
         Auto(string brand, string model, float SizeEngine, string color, string kpp):Garage(brand, model),SizeEngine(SizeEngine),
         Color(color), KPP(kpp){};
         Auto(const Auto& other);
+        Auto(string str);
         Auto();
         float getSizeEngine() const;
         string getColor() const;

@@ -1,3 +1,5 @@
+#pragma once
+
 /*
 Для
 каждого автобуса определено: марка, модель, количество сидячих
@@ -5,6 +7,8 @@
 */
 #include "Garage.h"
 #include <fstream>
+#include <sstream>
+
 
 class Bus: public Garage{
     private:
@@ -17,6 +21,7 @@ class Bus: public Garage{
         Bus(string brand, string model, int countSitPlace, int countPlace, string destination) :Garage(brand, model),
         countSitPlace(countSitPlace), countPlace(countPlace), destination(destination){};
         Bus(const Bus& other);
+        Bus(string str);
         Bus();
 
         int getCountSitPlace() const;

@@ -12,6 +12,22 @@ Motorcycle::Motorcycle():Garage(){
     this->Mission = "Undefined";
 }
 
+Motorcycle::Motorcycle(string str):Garage(){
+    string brand;
+    string model;
+    float sizeEngine;
+    int HP;
+    string Mission;
+
+    istringstream iss(str);
+    iss >> brand >> model >> sizeEngine >> HP>> Mission;
+    this->brand = brand;
+    this->model = model;
+    this->SizeEngine = (float)sizeEngine;
+    this->HP = (int)HP;
+    this->Mission = Mission;   
+}
+
 float Motorcycle::getSizeEngine() const{
     return this->SizeEngine;
 }
