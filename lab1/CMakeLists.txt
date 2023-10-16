@@ -9,7 +9,7 @@ set(SOURCES
         entity/Bus.cpp
         entity/Motorcycle.cpp
         keeper/keeper.cpp
-        
+        ui/ui.cpp
 )       
 
 set(Headers  
@@ -19,6 +19,7 @@ set(Headers
         entity/Bus.h
         entity/Motorcycle.h
         keeper/keeper.h
+        ui/ui.h
 )
 
 add_executable(lab1 ${SOURCES})
