@@ -6,6 +6,7 @@
 #include "../entity/Auto.h"
 #include "../entity/Bus.h"
 #include "../entity/Motorcycle.h"
+#include "../entity/MyException.h"
 
 
 
@@ -13,14 +14,15 @@ using namespace std;
 
 class Keeper{
     private:
+        int count = 0;
         Node* head;
         Node* lastUnit;
-        Node* tail;
 
     public:
-        Keeper():head(nullptr),tail(nullptr), lastUnit(nullptr){};
+        Keeper():head(nullptr), lastUnit(nullptr){};
         ~Keeper();
         void addUnit(Garage* unit);
+        void deleteUnit(int pos);
         void printToConsole();
         void loadToFile(string nameFile);
         void loadFromFile(string nameFile);

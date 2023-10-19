@@ -28,6 +28,11 @@ Motorcycle::Motorcycle(string str):Garage(){
     this->Mission = Mission;   
 }
 
+Motorcycle::~Motorcycle(){
+    cout << "Destructor Moto" << endl;
+    system("pause");
+}
+
 float Motorcycle::getSizeEngine() const{
     return this->SizeEngine;
 }

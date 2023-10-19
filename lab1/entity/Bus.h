@@ -15,7 +15,6 @@ class Bus: public Garage{
         int countSitPlace;
         int countPlace;
         string destination;
-    protected:
 
     public:
         Bus(string brand, string model, int countSitPlace, int countPlace, string destination) :Garage(brand, model),
@@ -23,6 +22,7 @@ class Bus: public Garage{
         Bus(const Bus& other);
         Bus(string str);
         Bus();
+        ~Bus();
 
         int getCountSitPlace() const;
         int getCoutnPlace() const;

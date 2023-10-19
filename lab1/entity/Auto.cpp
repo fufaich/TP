@@ -27,6 +27,11 @@ Auto::Auto():Garage(){
     this->KPP = "Undefined";
 }
 
+Auto::~Auto(){
+    std::cout << "Destructor Auto" << endl;
+    system("pause");
+}
+
 float Auto::getSizeEngine() const{
     return this->SizeEngine;
 }

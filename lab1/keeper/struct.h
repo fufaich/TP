@@ -7,5 +7,8 @@ struct Node
     Node(Garage* g): PtrGarage(g), next(nullptr){}
     ~Node(){
         delete PtrGarage;
+        cout << "Destructor Node" << endl;
+        
+        system("pause");
     }
 };

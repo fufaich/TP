@@ -20,6 +20,7 @@ class Auto: public Garage{
         Auto(const Auto& other);
         Auto(string str);
         Auto();
+        ~Auto();
         float getSizeEngine() const;
         string getColor() const;
         string getKPP() const;

@@ -27,6 +27,11 @@ Bus::Bus(string str):Garage(){
     this->destination = destination;   
 }
 
+Bus::~Bus(){
+    cout << "Destructor Bus" << endl;
+    system("pause");
+}
+
 int Bus::getCountSitPlace() const{
     return this->countSitPlace;
 }

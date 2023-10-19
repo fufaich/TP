@@ -21,6 +21,7 @@ class Motorcycle: public Garage{
         Motorcycle(const Motorcycle& other);
         Motorcycle(string str);
         Motorcycle();
+        ~Motorcycle();
 
         float getSizeEngine() const;
         int getHP() const;

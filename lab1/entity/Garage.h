@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <iostream>
 using namespace std;
 class Garage{
     protected:
@@ -9,7 +10,9 @@ class Garage{
         Garage(string brand, string model);
         Garage(const Garage& other);
         Garage();
-        ~Garage(){};
+        virtual ~Garage(){
+            cout << "Destructor garage" << endl;
+        };
         
         string getBrand() const;
         string getModel() const;
