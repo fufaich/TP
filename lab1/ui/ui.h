@@ -3,8 +3,12 @@
 class UI{
     private:
         string fileName;
-        void menu();
+        void menu(Keeper* kep);
+        void StartMenu(Keeper* kep);
+        void addAuto();
+        void addBus();
+        void addMoto();
     public:
-        UI();
+        UI(Keeper* kep);
         ~UI();
 };
