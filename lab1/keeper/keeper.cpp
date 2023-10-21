@@ -133,3 +133,17 @@ void Keeper::loadFromFile(string nameFile){
     readFile.close();
     
 }
+
+Node& Keeper::operator[] (const int index) {
+    Node* tmp = head;
+    if (index < 0 || index >= (count)){
+        throw MyException("Out of range");
+    }
+
+    for (size_t i = 0; i < index; i++)
+    {
+        tmp = tmp->next;
+    }
+    return *tmp;
+    
+}

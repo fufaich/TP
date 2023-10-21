@@ -32,4 +32,5 @@ class Keeper{
         void loadToFile(string nameFile);
         void loadFromFile(string nameFile);
 
+        Node& operator[] (const int index);
 };
