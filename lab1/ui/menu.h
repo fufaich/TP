@@ -15,6 +15,4 @@ class Menu{
         void menuEdit();
     public:
         Menu();
-
-
 };

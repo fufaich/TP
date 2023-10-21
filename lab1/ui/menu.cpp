@@ -125,7 +125,7 @@ void Menu::menuDelete(){
             std::cerr << e.what() << '\n';
             system("pause");
         }
-        
+        break;
     }
 }
 
