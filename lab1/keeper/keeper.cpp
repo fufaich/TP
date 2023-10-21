@@ -64,34 +64,20 @@ void Keeper::deleteUnit(int pos){
     }
 }
 
-int Keeper::getTypeOfUnit(int pos) const{
-    if (pos < 0 || pos >= (count)){
-        throw MyException("Out of range");
-    }
-    Node* tmp;
-    tmp = head;
-    for (size_t i = 0; i < pos; i++)
-    {
-        tmp = tmp->next;
-    }
-    
-    return tmp->PtrGarage->getType();
-}
-
 void Keeper::changeUnit(int pos){
-    if (pos < 0 || pos >= (count)){
+    if (pos < 0 || pos >= count){
         throw MyException("Out of range");
     }
-    Node* tmp;
-    tmp = head;
+
+    Node* tmp = head;
+
     for (size_t i = 0; i < pos; i++)
     {
         tmp = tmp->next;
     }
-    
-    int type = tmp->PtrGarage->getType();
-    
 
+    tmp->PtrGarage->setUnit();
+    
 }
 
 void Keeper::printToConsole(){

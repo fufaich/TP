@@ -71,22 +71,10 @@ void Motorcycle::ReadDetails(istream& is) {
     is >> brand >> model >> SizeEngine >> HP >> Mission;
 }
 
-void Motorcycle::editUnit(string str){
-    string brand;
-    string model;
-    float sizeEngine;
-    int HP;
-    string Mission;
-
-    istringstream iss(str);
-    iss >> brand >> model >> sizeEngine >> HP>> Mission;
-    this->brand = brand;
-    this->model = model;
-    this->SizeEngine = (float)sizeEngine;
-    this->HP = (int)HP;
-    this->Mission = Mission;   
-}
-
-int Motorcycle::getType() const{
-    return 2;
+void Motorcycle::setUnit(){
+    cout << "Brand: "; cin >> this->brand; cout << endl;
+    cout << "Model: "; cin >> this->model; cout << endl;
+    cout << "SizeEngine: "; cin >> this->SizeEngine; cout << endl;
+    cout << "HP: "; cin >> this->HP; cout << endl;
+    cout << "Mission: "; cin >> this->Mission; cout << endl;
 }

@@ -69,21 +69,11 @@ void Auto::ReadDetails(istream& is) {
     is >> brand >> model >> SizeEngine >> Color >> KPP;
 }
 
-void Auto::editUnit(string str) {
-    string brand;
-    string model;
-    float sizeEngine;
-    string color;
-    string kpp;
-    istringstream iss(str);
-    iss >> brand >> model >> sizeEngine >> color>> kpp;
-    this->brand = brand;
-    this->model = model;
-    this->SizeEngine = (float)sizeEngine;
-    this->Color = color;
-    this->KPP = kpp;   
+void Auto::setUnit(){
+    cout << "Brand: "; cin >> this->brand;
+    cout << "Model: "; cin >> this->model;
+    cout << "SizeEngine: "; cin >> this->SizeEngine;
+    cout << "Color: "; cin >> this->Color;
+    cout << "KPP: "; cin >> this->KPP;
 }
 
-int Auto::getType() const{
-    return 0;
-}

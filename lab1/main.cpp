@@ -1,8 +1,8 @@
 #include <iostream>
-#include "ui/ui.h"
+#include "ui/menu.h"
 
 
 int main(int *argc, char **argv){
-    UI ui;
+    Menu menu;
     return 0;
 }

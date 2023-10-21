@@ -71,22 +71,12 @@ void Bus::ReadDetails(istream& is) {
     is >> brand >> model >> countSitPlace >> countPlace >> destination;
 }
 
-void Bus::editUnit(string str){
-    string brand;
-    string model;
-    int countSitPlace;
-    int countPlace;
-    string destination;
-    istringstream iss(str);
-    iss >> brand >> model >> countSitPlace >> countPlace>> destination;
-    this->brand = brand;
-    this->model = model;
-    this->countSitPlace = (int)countSitPlace;
-    this->countPlace = (int)countPlace;
-    this->destination = destination;   
+void Bus::setUnit(){
+    cout << "Brand: "; cin >> this->brand; cout << endl;
+    cout << "Model: "; cin >> this->model; cout << endl;
+    cout << "countSitPlace: "; cin >> this->countSitPlace; cout << endl;
+    cout << "countPlace: "; cin >> this->countPlace; cout << endl;
+    cout << "destination: "; cin >> this->destination; cout << endl;
 }
 
 
-int Bus::getType() const{
-    return 1;
-}

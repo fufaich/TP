@@ -32,8 +32,7 @@ class Bus: public Garage{
         void setCoutnPlace(int value);
         void setDestination(string value);
 
-        void editUnit(string str) override;
+        void setUnit() override;
         void PrintDetails(ostream& os) const override;
         void ReadDetails(istream& is)  override;
-        int getType() const;
 };
