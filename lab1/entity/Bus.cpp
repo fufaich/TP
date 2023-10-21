@@ -44,6 +44,20 @@ string Bus::getDestination() const{
     return this->destination;
 }
 
+void Bus::setCountSitPlace(int value){
+    this->countSitPlace = value;
+}
+
+void Bus::setCoutnPlace(int value){
+    this->countPlace = value;
+}
+
+void Bus::setDestination(string value){
+    this->destination = value;
+}
+
+
+
 void Bus::PrintDetails(std::ostream& os) const{
         os << "Bus ";
         os << this->brand << " ";
@@ -57,3 +71,22 @@ void Bus::ReadDetails(istream& is) {
     is >> brand >> model >> countSitPlace >> countPlace >> destination;
 }
 
+void Bus::editUnit(string str){
+    string brand;
+    string model;
+    int countSitPlace;
+    int countPlace;
+    string destination;
+    istringstream iss(str);
+    iss >> brand >> model >> countSitPlace >> countPlace>> destination;
+    this->brand = brand;
+    this->model = model;
+    this->countSitPlace = (int)countSitPlace;
+    this->countPlace = (int)countPlace;
+    this->destination = destination;   
+}
+
+
+int Bus::getType() const{
+    return 1;
+}

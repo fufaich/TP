@@ -18,9 +18,13 @@ class Keeper{
         Node* head;
         Node* lastUnit;
 
+        
+
     public:
         Keeper():head(nullptr), lastUnit(nullptr){};
         ~Keeper();
+        int getTypeOfUnit(int pos) const;
+        void addUnit(Garage* unit, int pos);
         void addUnit(Garage* unit);
         void deleteUnit(int pos);
         void changeUnit(int pos);

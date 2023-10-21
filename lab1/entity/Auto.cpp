@@ -44,6 +44,18 @@ string Auto::getKPP() const{
     return this->KPP;
 }
 
+void Auto::setSizeEngine(float value){
+    this->SizeEngine = value;
+}
+
+void Auto::setColor(string value){
+    this->Color = value;
+}
+
+void Auto::setKPP(string value){
+    this->KPP = value;
+}
+
 void Auto::PrintDetails(ostream& os) const{
         os << "Auto ";
         os << this->brand << " ";
@@ -57,4 +69,21 @@ void Auto::ReadDetails(istream& is) {
     is >> brand >> model >> SizeEngine >> Color >> KPP;
 }
 
+void Auto::editUnit(string str) {
+    string brand;
+    string model;
+    float sizeEngine;
+    string color;
+    string kpp;
+    istringstream iss(str);
+    iss >> brand >> model >> sizeEngine >> color>> kpp;
+    this->brand = brand;
+    this->model = model;
+    this->SizeEngine = (float)sizeEngine;
+    this->Color = color;
+    this->KPP = kpp;   
+}
 
+int Auto::getType() const{
+    return 0;
+}

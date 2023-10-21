@@ -45,6 +45,19 @@ string Motorcycle::getMission() const{
     return this->Mission;
 }
 
+
+void Motorcycle::setSizeEngine(float value){
+    this->SizeEngine = value;
+}
+
+void Motorcycle::setHP(int value){
+    this->HP = value;
+}
+
+void Motorcycle::setMission(string value){
+    this->Mission = value;
+}
+
 void Motorcycle::PrintDetails(std::ostream& os) const{
         os << "Moto ";
         os << this->brand << " ";
@@ -58,4 +71,22 @@ void Motorcycle::ReadDetails(istream& is) {
     is >> brand >> model >> SizeEngine >> HP >> Mission;
 }
 
+void Motorcycle::editUnit(string str){
+    string brand;
+    string model;
+    float sizeEngine;
+    int HP;
+    string Mission;
 
+    istringstream iss(str);
+    iss >> brand >> model >> sizeEngine >> HP>> Mission;
+    this->brand = brand;
+    this->model = model;
+    this->SizeEngine = (float)sizeEngine;
+    this->HP = (int)HP;
+    this->Mission = Mission;   
+}
+
+int Motorcycle::getType() const{
+    return 2;
+}

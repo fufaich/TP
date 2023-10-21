@@ -22,3 +22,11 @@ string Garage::getBrand() const{
 string Garage::getModel() const{
     return this->model;
 }
+
+void Garage::setBrand(std::string brand){
+    this->brand = brand;
+}
+
+void Garage::setModel(std::string model){
+    this->model = model;
+}

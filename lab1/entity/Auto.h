@@ -24,7 +24,12 @@ class Auto: public Garage{
         float getSizeEngine() const;
         string getColor() const;
         string getKPP() const;
+        void setSizeEngine(float value);
+        void setColor(string value);
+        void setKPP(string value);
 
+        void editUnit(string str) override;
         void PrintDetails(std::ostream& os) const override;
         void ReadDetails(istream& is)  override;
+        int getType() const;
 };

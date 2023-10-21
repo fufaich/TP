@@ -16,7 +16,10 @@ class Garage{
         
         string getBrand() const;
         string getModel() const;
-
+        void setBrand(std::string brand);
+        void setModel(std::string model);
+        virtual void editUnit(string str) = 0;
         virtual void PrintDetails(std::ostream& os) const = 0;
         virtual void ReadDetails(std::istream& is)  = 0;
+        virtual int getType() const = 0;
 };

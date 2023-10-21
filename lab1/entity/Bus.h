@@ -28,6 +28,12 @@ class Bus: public Garage{
         int getCoutnPlace() const;
         string getDestination() const;
 
+        void setCountSitPlace(int value);
+        void setCoutnPlace(int value);
+        void setDestination(string value);
+
+        void editUnit(string str) override;
         void PrintDetails(ostream& os) const override;
         void ReadDetails(istream& is)  override;
+        int getType() const;
 };

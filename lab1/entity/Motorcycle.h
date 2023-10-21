@@ -27,7 +27,12 @@ class Motorcycle: public Garage{
         int getHP() const;
         string getMission() const;
 
+        void setSizeEngine(float value);
+        void setHP(int value);
+        void setMission(string value);
 
+        void editUnit(string str) override;
         void PrintDetails(std::ostream& os) const override;
         void ReadDetails(istream& is)  override;
+        int getType() const;
 };
