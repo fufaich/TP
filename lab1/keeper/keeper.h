@@ -8,8 +8,6 @@
 #include "../entity/Motorcycle.h"
 #include "../entity/MyException.h"
 
-
-
 using namespace std;
 
 class Keeper{
@@ -17,8 +15,6 @@ class Keeper{
         int count = 0;
         Node* head;
         Node* lastUnit;
-
-        
 
     public:
         Keeper():head(nullptr), lastUnit(nullptr){};
