@@ -3,7 +3,6 @@
 
 
 int main(int *argc, char **argv){
-    Keeper* kep = new Keeper();
-    UI ui(kep);
+    UI ui;
     return 0;
 }
