@@ -23,6 +23,7 @@ class Keeper{
         ~Keeper();
         void addUnit(Garage* unit);
         void deleteUnit(int pos);
+        void changeUnit(int pos);
         void printToConsole();
         void loadToFile(string nameFile);
         void loadFromFile(string nameFile);

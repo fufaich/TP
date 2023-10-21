@@ -23,6 +23,7 @@ void Keeper::addUnit(Garage* unit){
         lastUnit->next = new Node(unit);
         lastUnit = lastUnit->next;
     }
+    count++;
 }
 
 void Keeper::deleteUnit(int pos){
@@ -61,7 +62,20 @@ void Keeper::deleteUnit(int pos){
         pred_del->next = posle_del;
         count--;
     }
+}
 
+void Keeper::changeUnit(int pos){
+    if (pos < 0 || pos >= (count)){
+        throw MyException("Out of range");
+    }
+    Node* tmp;
+    tmp = head;
+    for (size_t i = 0; i < pos; i++)
+    {
+        tmp = tmp->next;
+    }
+    
+    int type = tmp->PtrGarage->getType();
     
 
 }
@@ -91,6 +105,9 @@ void Keeper::loadToFile(string nameFile){
 
 void Keeper::loadFromFile(string nameFile){
     ifstream readFile(nameFile);
+    if (!readFile.is_open()){
+        throw MyException("File not found");
+    }
     string word;
     string line;
     while (!readFile.eof())

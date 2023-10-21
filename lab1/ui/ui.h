@@ -11,6 +11,6 @@ class UI{
         void addBus();
         void addMoto();
     public:
-        UI(Keeper* kep);
+        UI();
         ~UI();
 };

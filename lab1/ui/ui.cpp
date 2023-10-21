@@ -1,8 +1,7 @@
 #include "ui.h"
 using namespace std;
 
-UI::UI(Keeper* kep){
-    this->kep = kep;
+UI::UI(){
     StartMenu();
 };
 
@@ -252,26 +251,48 @@ void UI::menu(int mode){
 }
 
 void UI::StartMenu(){
+    
     char choose;
-    cout << "1 - load from file" << endl;
-    cout << "2 - new DB" << endl;
-    cin >> choose;
-    switch (choose)
-    {
-    case '1':
+    while (1){    
         system("cls");
-        cout << "Enter filename:" << endl;
-        cin >> fileName; //обработать исключение
-        system("cls");
-        kep->loadFromFile(fileName);
-        menu(1);
-        break;
-    case '2':
-        menu(2);
-        break;
-    
-    default:
-        break;
+        cout << "1 - load from file" << endl;
+        cout << "2 - new DB" << endl;
+        cout << "0 - exit" << endl;
+
+        cin >> choose;
+        switch (choose)
+        {
+        case '1':
+            kep = new Keeper();
+
+            system("cls");
+            cout << "Enter filename:" << endl;
+            cin >> fileName; //обработать исключение
+            system("cls");
+            try
+            {
+                kep->loadFromFile(fileName);
+            }
+            catch(const MyException& e)
+            {
+                std::cerr << e.what() << '\n';
+                system("pause");
+                break;
+            }
+            
+            menu(1);
+            
+            delete kep;
+            break;
+        case '2':
+            kep = new Keeper();
+            menu(2);
+            delete kep;
+            break;
+        case '0':
+            return void();
+        default:
+            break;
+        }
     }
-    
 }
