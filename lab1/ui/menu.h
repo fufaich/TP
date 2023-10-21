@@ -3,7 +3,6 @@
 #include "../entity/Auto.h"
 #include "../entity/Bus.h"
 #include "../entity/Motorcycle.h"
-//#include "../entity/MyException.h"
 #include "../keeper/keeper.h"
 
 class Menu{
