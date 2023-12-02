@@ -38,6 +38,7 @@ void Keeper::add(StudentV2* student){
 void Keeper::printToConsoleGenius(){
     Node* iterator = head;
     iterator = head;
+    int k = 0;
     int prog[5];
     bool mode = true;
     for(int i = 0; i < countNodes; i++){
@@ -51,6 +52,7 @@ void Keeper::printToConsoleGenius(){
             }
         }
         if(mode){
+            k++;
             std:: cout << i << "  - ";
             std:: cout << student->getFio() << " ";
             std:: cout << "IdGorup: " << student->getIdGroup() << " ";
@@ -62,6 +64,9 @@ void Keeper::printToConsoleGenius(){
             std:: cout << "SredBall: " <<student->getSredBall() <<std::endl;;
         }
         iterator = iterator->next;
+    }
+    if (k==0){
+        std:: cout << "Genius not found"<< std::endl;
     }
 }
 

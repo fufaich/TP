@@ -12,4 +12,5 @@ class Menu{
         void menuEdit();
     public:
         Menu();
+        void start();
 };

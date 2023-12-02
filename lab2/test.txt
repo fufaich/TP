@@ -1,0 +1,5 @@
+Faf M A  1 2 3 4 5 
+fef M A  2 2 2 2 2 
+Fuf M A  3 3 3 3 3
+Fof M A  5 5 3 5 5 
+Fif M A  5 5 2 5 5 

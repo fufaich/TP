@@ -2,6 +2,10 @@
 
 
 Menu::Menu(){
+    
+}
+
+void Menu::start(){
     kep = new Keeper;
     startMenu();
     delete kep;
