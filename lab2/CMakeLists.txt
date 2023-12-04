@@ -4,18 +4,19 @@ project(lab2)
 
 set(SOURCES
         main.cpp
-        part1/Student.cpp
         part1/keeper.cpp
-        part1/Menu.cpp
-
-)       
+        part1/Menu.cpp 
+        part1/Student.cpp
+        )       
 
 set(Headers  
-        menu.h
-        part1/Student.h
-        part1/StudentWrap.h
-        part1/Keeper.h
-        part1/Menu.h
+       part1/Keeper.h
+       part1/Menu.h
+       part1/MyException.h  
+       part1/Student.h
+       part1/StudentWrap.h
+       part2/part2.h
+
 )
 
 add_executable(lab2 ${SOURCES})

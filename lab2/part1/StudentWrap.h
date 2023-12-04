@@ -20,12 +20,14 @@ class StudentV2 : public Student {
             string n;
             string f;
             string o;
+            short idGroup;
             
             int prog[5];
             istringstream iss(str);
-            iss >> f >> n >> o >> prog[0]>> prog[1] >> prog[2] >> prog[3] >>prog[4];
+            iss >> f >> n >> o >> idGroup >> prog[0]>> prog[1] >> prog[2] >> prog[3] >>prog[4];
             
             setFio(f,n,o);
+            setIdGroup(idGroup);
             setProgress(prog);
             calculateSredBall(); 
         };

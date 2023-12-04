@@ -1,5 +1,5 @@
-Faf M A  1 2 3 4 5 
-fef M A  2 2 2 2 2 
-Fuf M A  3 3 3 3 3
-Fof M A  5 5 3 5 5 
-Fif M A  5 5 2 5 5 
+Fazan Y S  1144 5 5 5 5 5 
+Kova N U  1144 3 5 4 5 4 
+Morozov K A  1144 3 3 3 3 3 
+Zhabin M A  1144 2 2 2 2 2 
+asd a a  12312 9 9 9 9 9 

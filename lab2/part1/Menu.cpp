@@ -25,6 +25,8 @@ void Menu::startMenu(){
         std::cout << "5 - Save to file\n";
         std::cout << "6 - Extract from file\n";
         std::cout << "7 - Print Genius\n";
+        std::cout << "8 - Sort\n";
+
         std::cout << "0 - Exit\n";
         cin >> choose;
         switch (choose)
@@ -39,7 +41,7 @@ void Menu::startMenu(){
             menuEdit();
             break;
         case '4':
-            kep->sort();
+            //kep->sort();
             kep->printToConsole();
             system("pause");
             break;
@@ -79,6 +81,9 @@ void Menu::startMenu(){
             kep->printToConsoleGenius();
             system("pause");
             break;
+        case '8':
+            kep->sort();
+            break;
         case '0':
             return void();
         default:
@@ -97,7 +102,7 @@ void Menu::menuAdd(){
     element->setUnit();
  
     kep->add(element);
-     system("pause");
+    system("pause");
 }
 
 void Menu::menuDelete(){

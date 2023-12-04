@@ -1,7 +1,7 @@
 #include <iostream>
 #include "part1/Keeper.h"
 #include "part1/Menu.h"
-#include "part2/part2.cpp"
+#include "part2/part2.h"
 using namespace std;
 
 int main(int *argc, char **argv){

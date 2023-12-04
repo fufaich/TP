@@ -149,33 +149,53 @@ void Keeper::deleteUnit(int pos){
     tmp->value->setUnit();
  }
 
+ bool isSort(Node* start, Node* end){
+    Node* tmp;
+    bool result = true;
+    tmp = start->next;
+    while(start != end){
+        if(tmp == nullptr){
+            break;
+        }
+        if(*(start->value) < *(tmp->value)){
+            return !result;
+        }
+        start = start->next;
+        tmp = tmp->next;
+    }
+    return result;
+ }
+
+ void swap(Node* l, Node* r){
+    StudentV2* tmp = l->value;
+    l->value = r->value;
+    r->value = tmp;
+ }
+
 void Keeper::sort(){
-    if (countNodes <= 1)
-        return;
-
-    StudentV2 **studentsArray = new StudentV2 *[countNodes];
-    Node *current = head;
-    int index = 0;
-
-    while (current != nullptr)
-    {
-        studentsArray[index++] = current->value;
-        current = current->next;
+    if(countNodes <= 1){
+        return void();
     }
-
-    std::sort(studentsArray, studentsArray + countNodes, [](const StudentV2 *a, const StudentV2 *b)
-              { return a->getSredBall() > b->getSredBall(); });
-
-    head = new Node(studentsArray[0]);
-    current = head;
-
-    for (int i = 1; i < countNodes; ++i)
-    {
-        current->next = new Node(studentsArray[i]);
-        current = current->next;
+    if(isSort(head,tail)){
+        std::cout << "Is sort" << std::endl;
+        system("pause");
     }
-
-    delete[] studentsArray;
+    else{
+        int lenght = countNodes;
+        Node* left = head;
+        Node* right = head->next;
+    
+        for (size_t i = 0; i < lenght; i++)
+        {   
+            for (size_t j = 0; j < lenght-1; j++)
+            {
+                if( *(((*this)[j]).value) <=   *(((*this)[j+1]).value) ){
+                    swap((((*this)[j]).value), (((*this)[j+1]).value)); 
+                }
+                
+            }
+        }
+    }
 }
 
 void Keeper::loadToFile(string nameFile){
@@ -183,6 +203,8 @@ void Keeper::loadToFile(string nameFile){
     Node* tmp = head;
     while (tmp != nullptr){
         tmp->value->PrintDetails(outputFile);
+        if(tmp->next != nullptr)
+            outputFile << "\n";
         tmp = tmp->next;
     }
     outputFile.close();
