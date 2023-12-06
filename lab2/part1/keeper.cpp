@@ -42,6 +42,7 @@ void Keeper::printToConsoleGenius(){
     int prog[5];
     bool mode = true;
     for(int i = 0; i < countNodes; i++){
+        mode = true;
         StudentV2 *student = iterator->value;
         int* prog = student->getProgress();
         for (size_t i = 0; i < 5; i++)
