@@ -23,7 +23,7 @@ int partTwo() {
     std::cout << "Enter the aim word: ";
     std::cin >> wordToFind;
 
-    std::ifstream file("file.txt"); // Открываем файл для чтения
+    std::ifstream file("file.txt"); 
 
     if (!file.is_open()) {
         std::cout << "Error open file." << std::endl;
@@ -31,12 +31,11 @@ int partTwo() {
     }
 
     std::stringstream buffer;
-    buffer << file.rdbuf(); // Считываем содержимое файла в строковый поток
+    buffer << file.rdbuf();
 
-    std::string fileContent = buffer.str(); // Получаем содержимое файла как строку
-    file.close(); // Закрываем файл
+    std::string fileContent = buffer.str();
+    file.close(); 
 
-    // Выводим предложения с заданным словом
     printSentencesWithWord(fileContent, wordToFind);
 
     return 0;

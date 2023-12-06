@@ -178,7 +178,6 @@ void Keeper::sort(){
         return void();
     }
     if(isSort(head,tail)){
-        std::cout << "Is sort" << std::endl;
         system("pause");
     }
     else{
